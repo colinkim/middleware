@@ -1,0 +1,14 @@
+syntax = "proto3";
+package middleware.middleware;
+
+import "gogoproto/gogo.proto";
+import "middleware/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "middleware/x/middleware/types";
+
+// GenesisState defines the middleware module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}

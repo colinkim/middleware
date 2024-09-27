@@ -1,0 +1,14 @@
+syntax = "proto3";
+package middleware.witness;
+
+import "gogoproto/gogo.proto";
+import "witness/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "middleware/x/witness/types";
+
+// GenesisState defines the witness module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}

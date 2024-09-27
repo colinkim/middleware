@@ -1,0 +1,23 @@
+syntax = "proto3";
+package middleware.witness;
+
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "middleware/x/witness/types";
+
+// Msg defines the Msg service.
+service Msg {
+      rpc Anchoring(MsgAnchoring) returns (MsgAnchoringResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgAnchoring {
+  string creator = 1;
+  string blockhash = 2;
+  string height = 3;
+}
+
+message MsgAnchoringResponse {
+}
+
+// this line is used by starport scaffolding # proto/tx/message
